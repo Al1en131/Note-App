@@ -1,0 +1,306 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  display: block;
+  background-color: #4a90e2;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #4a90e2;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.form-container {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #4a90e2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #4a90e2;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4a90e2;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #7daee7;
+}
+
+#notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+note-item {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+note-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+note-item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #333;
+}
+
+note-item p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+note-item span {
+  font-size: 12px;
+  color: #888;
+}
+
+note-item button {
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e74c3c;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+note-item button:hover {
+  background-color: #c0392b;
+}
+
+#delete-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#loadingIndicator {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 1);
+  padding-top: 20px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 1000;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a90e2;
+  display: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #ccc;
+  color: black;
+}
+
+.cancel-button:hover {
+  background-color: #bbb;
+}
+
+#confirmDeleteButton {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#confirmDeleteButton:hover {
+  background-color: #c0392b;
+}
+
+.alert-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.alert-modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.alert-modal button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.alert-modal button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  #notes-container {
+    gap: 15px;
+  }
+
+  note-item {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  input,
+  textarea {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  #notes-container {
+    gap: 10px;
+  }
+
+  note-item {
+    width: 100%;
+  }
+}
