@@ -187,7 +187,7 @@
           <mxGeometry y="346" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="qKkf9vbQ_oJwQgPkBgko-28" value="Transaction" style="swimlane;fontStyle=0;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
-          <mxGeometry x="508" y="522" width="160" height="320" as="geometry">
+          <mxGeometry x="508" y="522" width="160" height="268" as="geometry">
             <mxRectangle x="550" y="140" width="160" height="26" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -220,9 +220,6 @@
         </mxCell>
         <mxCell id="qKkf9vbQ_oJwQgPkBgko-40" value="updateTransactionStatus()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="qKkf9vbQ_oJwQgPkBgko-28" vertex="1">
           <mxGeometry y="242" width="160" height="26" as="geometry" />
-        </mxCell>
-        <mxCell id="qKkf9vbQ_oJwQgPkBgko-41" value="cancelTransaction()" style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="qKkf9vbQ_oJwQgPkBgko-28" vertex="1">
-          <mxGeometry y="268" width="160" height="26" as="geometry" />
         </mxCell>
         <mxCell id="TLDheC0xS_f5XoN5ucsi-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="zkfFHV4jXpPFQw0GAbJ--25" edge="1">
           <mxGeometry relative="1" as="geometry">
